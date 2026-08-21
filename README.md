@@ -123,14 +123,6 @@ Things may occasionally break, change location, or gain new dependencies without
 
 # Preview
 
-This section contains screenshots and previews of some of the main features included in my desktop configuration.
-
-Replace the placeholder image paths with screenshots from your own repository, for example:
-
-```text
-assets/screenshots/desktop.png
-```
-
 ## Desktop
 
 Overview of the complete Hyprland desktop setup.
@@ -163,14 +155,6 @@ Custom power menu for shutdown, reboot, logout, and other session actions.
 
 ---
 
-## Notifications
-
-Desktop notification appearance and behavior.
-
-![Notifications](assets/screenshots/notifications.png)
-
----
-
 ## Neovim
 
 My Neovim development environment.
@@ -184,52 +168,4 @@ My Neovim development environment.
 Foot terminal configured to match the rest of the desktop.
 
 ![Terminal](assets/screenshots/terminal.png)
-
----
-
-## File Manager
-
-Dolphin configured as part of the desktop environment.
-
-![File manager](assets/screenshots/file-manager.png)
-
----
-
-## Lock Screen
-
-Hyprlock configuration.
-
-![Lock screen](assets/screenshots/lock-screen.png)
-
----
-
-## Additional Features
-
-More screenshots can easily be added using the following template:
-
-```markdown
-## Feature Name
-
-Short description of the feature.
-
-![Feature description](assets/screenshots/feature-name.png)
-
----
-```
-
-A suggested repository layout for screenshots is:
-
-```text
-assets/
-└── screenshots/
-    ├── desktop.png
-    ├── bar.png
-    ├── launcher.png
-    ├── power-menu.png
-    ├── notifications.png
-    ├── neovim.png
-    ├── terminal.png
-    ├── file-manager.png
-    └── lock-screen.png
-```
 
