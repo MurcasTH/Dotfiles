@@ -1,0 +1,5 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export SUDO_EDITOR:nvim
+SETUVAR __fish_initialized:4300
+SETUVAR fish_user_paths:/opt/vulkansdk/1\x2e4\x2e357\x2e1/x86_64/bin\x1e/home/murcas/\x2elocal/bin
