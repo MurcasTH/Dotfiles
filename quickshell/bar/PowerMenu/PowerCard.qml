@@ -14,14 +14,17 @@ Rectangle {
     implicitHeight: cardStyle.height
     radius: cardStyle.radius
 
-    color: cardStyle.backgroundColor
+    color: mouseArea.containsMouse ? cardStyle.backgroundHoverColor : cardStyle.backgroundColor
 
     border.width: cardStyle.borderWidth
     border.color: cardStyle.borderColor
 
     MouseArea {
+        id: mouseArea
         anchors.fill: parent
         onClicked: root.clicked()
+
+        hoverEnabled: true
     }
 
     Text {
@@ -31,6 +34,6 @@ Rectangle {
         text: root.icon
         font.pixelSize: root.cardStyle.pixelSize
         font.family: "JetBrainsMono Nerd"
-        color: root.cardStyle.iconColor
+        color: mouseArea.containsMouse ? root.cardStyle.iconHoverColor : root.cardStyle.iconColor
     }
 }

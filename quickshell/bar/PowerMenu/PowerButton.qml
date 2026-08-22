@@ -7,6 +7,7 @@ Rectangle {
 
     // Button vars
     property color iconColor: "#f7768e"
+    property color iconHoverColor: "#87768e"
 
     // PowerMenuCard vars
     property PowerCardStyle cardStyle: PowerCardStyle {}
@@ -22,7 +23,7 @@ Rectangle {
         font.family: "JetBrainsMono Nerd Font"
         text: "⏻"
 
-        color: root.iconColor
+        color: mouseArea.containsMouse ? root.iconHoverColor : root.iconColor
     }
 
     anchors {
@@ -42,7 +43,9 @@ Rectangle {
         cardStyle: root.cardStyle
     }
     MouseArea {
+        id: mouseArea
         anchors.fill: parent
         onClicked: powerMenuModule.toggle()
+        hoverEnabled: true
     }
 }

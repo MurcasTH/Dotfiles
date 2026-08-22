@@ -37,21 +37,27 @@ Scope {
 
                 screen: bar.screen
 
-                activeColor: Themes.TokyoNight.accent
+                activeColor: Themes.TokyoNight.iconActiveColor
                 inactiveColor: Themes.TokyoNight.searchBackground
-                hoverColor: Themes.TokyoNight.selectedBackground
+                hoverColor: Themes.TokyoNight.iconHoverColor
                 textColor: Themes.TokyoNight.foreground
                 activeTextColor: Themes.TokyoNight.background
             }
 
             PowerMenuModule.PowerButton {
                 bar: bar
-                iconColor: Themes.TokyoNight.accent
+                iconColor: Themes.TokyoNight.iconColor
+                iconHoverColor: Themes.TokyoNight.iconHoverColor
 
                 cardStyle: PowerMenuModule.PowerCardStyle {
-                    backgroundColor: Themes.TokyoNight.searchBackground
-                    borderColor: Themes.TokyoNight.selectedBackground
-                    iconColor: Themes.TokyoNight.accent
+                    backgroundColor: Themes.TokyoNight.buttonBackground
+                    backgroundHoverColor: Themes.TokyoNight.buttonHoverBackground
+
+                    iconColor: Themes.TokyoNight.iconColor
+                    iconHoverColor: Themes.TokyoNight.iconHoverColor
+
+                    borderColor: Themes.TokyoNight.buttonBorderColor
+                    borderWidth: 2
                 }
             }
         }
