@@ -15,6 +15,7 @@ Rectangle {
     radius: cardStyle.radius
 
     color: mouseArea.containsMouse ? cardStyle.backgroundHoverColor : cardStyle.backgroundColor
+    opacity: 0.8
 
     border.width: cardStyle.borderWidth
     border.color: cardStyle.borderColor
