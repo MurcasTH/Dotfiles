@@ -4,6 +4,7 @@ import QtQuick
 import qs.bar.Workspace as WorkspaceModule
 import qs.themes as Themes
 import qs.bar.PowerMenu as PowerMenuModule
+import qs.bar.Battery as BatteryModule
 
 Scope {
     id: root
@@ -43,21 +44,40 @@ Scope {
                 textColor: Themes.TokyoNight.foreground
                 activeTextColor: Themes.TokyoNight.background
             }
+            Row {
+                id: rightModules
 
-            PowerMenuModule.PowerButton {
-                bar: bar
-                iconColor: Themes.TokyoNight.iconColor
-                iconHoverColor: Themes.TokyoNight.iconHoverColor
+                anchors {
+                    right: parent.right
+                    top: parent.top
+                    bottom: parent.bottom
+                }
 
-                cardStyle: PowerMenuModule.PowerCardStyle {
-                    backgroundColor: Themes.TokyoNight.buttonBackground
-                    backgroundHoverColor: Themes.TokyoNight.buttonHoverBackground
+                BatteryModule.Battery {
+                    anchors.verticalCenter: parent.verticalCenter
 
                     iconColor: Themes.TokyoNight.iconColor
                     iconHoverColor: Themes.TokyoNight.iconHoverColor
+                    textColor: Themes.TokyoNight.primaryForeground
+                    textBackground: Themes.TokyoNight.elevatedBackground
+                    borderColor: Themes.TokyoNight.subtleBorderColor
+                }
 
-                    borderColor: Themes.TokyoNight.buttonBorderColor
-                    borderWidth: 2
+                PowerMenuModule.PowerButton {
+                    bar: bar
+                    iconColor: Themes.TokyoNight.iconColor
+                    iconHoverColor: Themes.TokyoNight.iconHoverColor
+
+                    cardStyle: PowerMenuModule.PowerCardStyle {
+                        backgroundColor: Themes.TokyoNight.buttonBackground
+                        backgroundHoverColor: Themes.TokyoNight.buttonHoverBackground
+
+                        iconColor: Themes.TokyoNight.iconColor
+                        iconHoverColor: Themes.TokyoNight.iconHoverColor
+
+                        borderColor: Themes.TokyoNight.buttonBorderColor
+                        borderWidth: 2
+                    }
                 }
             }
         }

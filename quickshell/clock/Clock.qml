@@ -11,6 +11,10 @@ Scope {
         PanelWindow {
             id: overlay
             required property ShellScreen modelData
+<<<<<<< HEAD
+=======
+            property real aspectRatio: screen.width / screen.height
+>>>>>>> feature/bar_batteryModule
             screen: modelData
 
             implicitWidth: modelData.width
@@ -40,7 +44,11 @@ Scope {
                 text: Qt.formatDateTime(clock.date, "hh:mm")
 
                 renderType: Text.NativeRendering
+<<<<<<< HEAD
                 font.pixelSize: 150
+=======
+                font.pixelSize: Math.round(65 * overlay.aspectRatio)
+>>>>>>> feature/bar_batteryModule
                 font.family: "M PLUS Rounded 1c"
                 font.weight: Font.Black
                 color: walColors.item?.color3
