@@ -20,5 +20,5 @@ set PATH $PATH /home/murcas/.local/bin
 # Make neovim use my configs even as sudo
 set -Ux SUDO_EDITOR nvim
 
-# get vulkansdk started -- Not installed on Murc-LAB
-# source /opt/vulkansdk/1.4.357.1/setup-env.fish 
+# get vulkansdk started
+source /opt/vulkansdk/1.4.357.1/setup-env.fish
