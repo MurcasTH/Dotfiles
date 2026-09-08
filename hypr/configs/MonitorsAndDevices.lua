@@ -34,6 +34,18 @@ local function configureMonitors()
 	end
 end
 
+local function configureDevices()
+	local monitors = hl.get_monitors()
+	if monitors[1] == nil then
+		return
+	end
+
+	hl.device({
+		name = "wacom-intuos-m-pen",
+		output = monitors[1].name, -- First Monitor [1]
+	})
+end
+
 ------------------
 ---- MONITORS ----
 ------------------
@@ -57,9 +69,5 @@ end)
 
 hl.on("monitor.added", function()
 	configureMonitors()
+	configureDevices()
 end)
-
-hl.device({
-	name = "wacom-intuos-m-pen",
-	output = hl.get_monitors()[1].name, -- First Monitor [1]
-})
