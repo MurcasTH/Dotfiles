@@ -21,4 +21,6 @@ set PATH $PATH /home/murcas/.local/bin
 set -Ux SUDO_EDITOR nvim
 
 # get vulkansdk started
-source /opt/vulkansdk/1.4.357.1/setup-env.fish
+if test -f /opt/vulkansdk/1.4.357.1/setup-env.fish
+    source /opt/vulkansdk/1.4.357.1/setup-env.fish
+end
