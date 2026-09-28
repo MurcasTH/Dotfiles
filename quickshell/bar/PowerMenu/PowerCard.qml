@@ -34,7 +34,7 @@ Rectangle {
         anchors.centerIn: parent
         text: root.icon
         font.pixelSize: root.cardStyle.pixelSize
-        font.family: "JetBrainsMono Nerd"
+        font.family: root.cardStyle.fontFamily
         color: mouseArea.containsMouse ? root.cardStyle.iconHoverColor : root.cardStyle.iconColor
     }
 }

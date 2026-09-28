@@ -2,6 +2,7 @@ import QtQuick
 
 QtObject {
     property int pixelSize: 200
+    property string fontFamily: "JetBrainsMono Nerd Font"
     property int width: 250
     property int height: 350
     property int radius: 30
